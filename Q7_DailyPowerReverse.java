@@ -1,6 +1,8 @@
+
 import java.util.Scanner;
 
 public class Q7_DailyPowerReverse {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -9,7 +11,7 @@ public class Q7_DailyPowerReverse {
             power[i] = sc.nextInt();
         }
 
-        // 兩指標交換
+        // 原地反轉：用雙指標交換
         int left = 0, right = 6;
         while (left < right) {
             int temp = power[left];
@@ -19,10 +21,12 @@ public class Q7_DailyPowerReverse {
             right--;
         }
 
-        // 輸出
+        // 輸出反轉後結果
         for (int i = 0; i < 7; i++) {
             System.out.print(power[i]);
-            if (i < 6) System.out.print(" ");
+            if (i != 6) {
+                System.out.print(" ");
+            }
         }
         System.out.println();
 
